@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module classpath="CMake" type="CPP_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Python" name="Python facet">
+      <configuration sdkName="Python 3.10 (CLI_module)" />
+    </facet>
+  </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="542567da-df9e-4866-b77c-984e5b33b6e6" />
+  </component>
+</module>

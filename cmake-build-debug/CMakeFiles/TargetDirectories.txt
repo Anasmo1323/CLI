@@ -1,0 +1,3 @@
+C:/Users/Anas Mohamed/Desktop/CLI_module/cmake-build-debug/CMakeFiles/CLI_module.dir
+C:/Users/Anas Mohamed/Desktop/CLI_module/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Anas Mohamed/Desktop/CLI_module/cmake-build-debug/CMakeFiles/rebuild_cache.dir
