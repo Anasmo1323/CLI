@@ -31,14 +31,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name='cli-calculator-hossam',
+    name='cli-calculator',
     version='1.0.0',
-    author='Hossam Ali',
-    author_email='hossam.ali@well.ox.ac.uk',
+    author='Ali',
+    author_email='alizayan684@gmail.com',
     description='A CLI calculator with a C backend as per the technical assessment.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/hossam-ali/calculator-assessment',
+    url='',
     # Tell setuptools the root of the Python package source.
     package_dir={'': 'src/python'},
     # Automatically find all Python packages under src/python.
