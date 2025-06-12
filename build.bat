@@ -7,7 +7,7 @@ set C_SRC_DIR=%BASE_DIR%src\c
 set OUTPUT_DIR=%BASE_DIR%src\python\calculator
 
 :: Compiler settings
-set PYTHON_INCLUDES="C:\Python312\Include"  :: UPDATE THIS PATH
+set PYTHON_INCLUDES="C:\Users\Anas Mohamed\AppData\Local\Programs\Python\Python311\Include"
 set GCC_CMD=gcc -shared -fPIC -I %PYTHON_INCLUDES% -o "%OUTPUT_DIR%\_c_calculator.pyd"
 
 :: Source files
