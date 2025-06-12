@@ -2,17 +2,22 @@
 from setuptools import setup, Extension, find_packages
 import os
 import sys
-import pathlib
 
-# Define version in a single place for easier maintenance
+# Define the version in a single place for easier maintenance
 VERSION = '1.0.0'
 
 # Handle Windows compiler issues with a more robust approach
 extra_compile_args = []
-if sys.platform == 'win32':
-    # Use setuptools approach instead of distutils hack
-    # This is a more future-proof way to handle MSVC compatibility
-    extra_compile_args.append('/DWIN32')
+# Windows-specific configuration
+if sys.platform == "win32":
+    from distutils import cygwinccompiler
+
+    # Force MinGW if available
+    if os.system("gcc --version") == 0:
+        cygwinccompiler.get_msvcr = lambda: []
+        extra_compile_args = ['-fPIC', '-shared']
+    else:
+        extra_compile_args = ['/O2']
 
 # Define source and include directories
 SRC_DIR = os.path.join('src', 'c')
@@ -32,12 +37,12 @@ for c_dir in C_DIRS:
         source_file = os.path.join(SRC_DIR, 'module.c')
     else:
         filename = 'add.c' if c_dir == 'addition' else \
-                  'sub.c' if c_dir == 'subtraction' else \
-                  'multi.c' if c_dir == 'multiplication' else \
-                  'div.c' if c_dir == 'division' else \
-                  'op_handler.c'
+            'sub.c' if c_dir == 'subtraction' else \
+                'multi.c' if c_dir == 'multiplication' else \
+                    'div.c' if c_dir == 'division' else \
+                        'op_handler.c'
         source_file = os.path.join(SRC_DIR, c_dir, filename)
-    
+
     if not os.path.exists(source_file):
         raise FileNotFoundError(f"Required source file not found: {source_file}")
     sources.append(source_file)
@@ -64,14 +69,14 @@ except FileNotFoundError:
     long_description = ""
 
 setup(
-    name='cli-calculator',
+    name='cli-calculator',  # Match pyproject.toml
     version=VERSION,
     author='Ali',
     author_email='alizayan684@gmail.com',
-    description='A CLI calculator with a C backend as per the technical assessment.',
+    description='A robust CLI calculator with a C backend.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/username/cli-calculator',  # Replace with your actual repo URL
+    url='https://github.com/Anasmo1323/CLI',
     package_dir={'': 'src/python'},
     packages=find_packages(where='src/python'),
     ext_modules=[c_calculator_extension],
@@ -85,6 +90,7 @@ setup(
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Operating System :: OS Independent',
         "License :: OSI Approved :: MIT License",
     ],

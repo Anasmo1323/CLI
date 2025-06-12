@@ -16,7 +16,7 @@ set C_FILES=(
     "%C_SRC_DIR%\subtraction\sub.c"
     "%C_SRC_DIR%\multiplication\multi.c"
     "%C_SRC_DIR%\division\div.c"
-    "%C_SRC_DIR%\ophandler\op_handler.c"
+    "%C_SRC_DIR%\OpHandler\op_handler.c"
     "%C_SRC_DIR%\module.c"
 )
 

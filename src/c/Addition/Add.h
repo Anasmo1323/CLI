@@ -1,8 +1,8 @@
-#include "Python.h"
 
 #ifndef CLI_MODULE_ADD_H
 #define CLI_MODULE_ADD_H
-
+#define PY_SSIZE_T_CLEAN
+#include <Python.h>
 // Pure C function for internal use
 double c_api_add(double a, double b);
 

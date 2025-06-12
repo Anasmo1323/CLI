@@ -1,4 +1,3 @@
-# src/python/calculator/__init__.py
 """
 Calculator Package
 ==================

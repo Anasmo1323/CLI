@@ -2,8 +2,8 @@
 #ifndef CLI_MODULE_MULTI_H
 #define CLI_MODULE_MULTI_H
 
-#include "Python.h"
-
+#define PY_SSIZE_T_CLEAN
+#include <Python.h>
 // Pure C function for internal use
 double c_api_multiply(double a, double b);
 
