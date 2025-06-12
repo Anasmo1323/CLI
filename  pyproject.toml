@@ -1,0 +1,23 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cli-calculator-hossam"
+version = "0.1.0"
+description = "A CLI calculator with a C backend."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT License" }
+authors = [{ name = "Hossam Ali", email = "hossam.ali@well.ox.ac.uk" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: C",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/calculator" # CHANGE THIS
+
+[project.scripts]
+calc = "calculator.cli:main"
