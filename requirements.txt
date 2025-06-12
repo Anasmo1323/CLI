@@ -1,0 +1,5 @@
+# requirements.txt
+# This file lists the Python packages required for development and testing.
+
+# Pytest is the testing framework used for the Python tests.
+pytest

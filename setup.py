@@ -1,49 +1,60 @@
 # setup.py
 from setuptools import setup, Extension, find_packages
+import os
 
-# Define the C extension module
+# Define the C extension module using os.path.join for cross-platform compatibility.
 c_calculator_extension = Extension(
+    # The full name of the extension module, including the package name.
     'calculator._c_calculator',
     sources=[
-        'src/c/module.c',
-        'src/c/addition/add.c',
-        'src/c/subtraction/sub.c',
-        'src/c/multiplication/multi.c',
-        'src/c/division/div.c',
-        'src/c/ophandler/op_handler.c'
+        os.path.join('src', 'c', 'module.c'),
+        os.path.join('src', 'c', 'addition', 'add.c'),
+        os.path.join('src', 'c', 'subtraction', 'sub.c'),
+        os.path.join('src', 'c', 'multiplication', 'multi.c'),
+        os.path.join('src', 'c', 'division', 'div.c'),
+        os.path.join('src', 'c', 'ophandler', 'op_handler.c')
     ],
+    # Add include directories so C files can find each other's headers.
     include_dirs=[
-        'src/c/addition',
-        'src/c/subtraction',
-        'src/c/multiplication',
-        'src/c/division',
-        'src/c/ophandler'
+        os.path.join('src', 'c'),
+        os.path.join('src', 'c', 'addition'),
+        os.path.join('src', 'c', 'subtraction'),
+        os.path.join('src', 'c', 'multiplication'),
+        os.path.join('src', 'c', 'division'),
+        os.path.join('src', 'c', 'ophandler')
     ],
     language='c'
 )
 
+# Read the contents of the README file for the long description.
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
     name='cli-calculator-hossam',
-    version='0.1.0',
+    version='1.0.0',
     author='Hossam Ali',
     author_email='hossam.ali@well.ox.ac.uk',
     description='A CLI calculator with a C backend as per the technical assessment.',
-    long_description=open('README.md').read(),
+    long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/your-username/calculator', # CHANGE THIS
+    url='https://github.com/hossam-ali/calculator-assessment',
+    # Tell setuptools the root of the Python package source.
     package_dir={'': 'src/python'},
+    # Automatically find all Python packages under src/python.
     packages=find_packages(where='src/python'),
+    # Specify the C extensions to build.
     ext_modules=[c_calculator_extension],
+    # Define the command-line script entry point.
     entry_points={
         'console_scripts': [
             'calc=calculator.cli:main',
         ],
     },
     classifiers=[
-        'Programming Language :: Python :: 3',
-        'Programming Language :: C',
+        'Programming Language :: Python :: 3.8',
         'Operating System :: OS Independent',
-        'Topic :: Scientific/Engineering :: Mathematics',
+        "License :: OSI Approved :: MIT License",
     ],
     python_requires='>=3.8',
 )
