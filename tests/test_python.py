@@ -1,6 +1,5 @@
 import pytest
 from calculator import Calculator
-
 # A tolerance for float comparisons
 TOLERANCE = 1e-9
 
