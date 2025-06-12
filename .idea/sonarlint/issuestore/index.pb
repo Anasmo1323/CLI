@@ -1,25 +1,23 @@
 
-6
-main.c,4\0\406e031b8824ea26ae0bf4d7579a1d89e3fb5906
 >
 CMakeLists.txt,9\a\9a2aa4db38d3115ed60da621e012c0efc0172aae
-E
-OpHandler/OpHandler.h,7\c\7c7957563d5cb7295a54301f39ffaa9fb45a6123
+
+Q.idea/sonarlint/securityhotspotstore/9/a/9a2aa4db38d3115ed60da621e012c0efc0172aae,e\4\e4b358d3d9fb3f2eec26eec20d2a1995e2cbfd1f
+w
+G.idea/sonarlint/issuestore/9/a/9a2aa4db38d3115ed60da621e012c0efc0172aae,1\e\1e30e05b5189731ee9be6add1ef16336cdd01e07
+L
+src/c/Multiplication/Multi.c,2\2\22e17ead1041e71a8936e849e4b4083b01e34385
+L
+src/c/Multiplication/Multi.h,6\a\6a2afbd465f6ee1e159b034117705fcd2621298b
 >
-Division/Div.h,d\d\ddbb37724cae9af3fb09dcd475feeb80a5dd97e7
-F
-Multiplication/Multi.h,b\1\b10be2d5dcfb2f01251d309dc521e1a8067127e2
-F
-Multiplication/Multi.c,1\a\1a9636d4bbb5a30f9fe653e7996277410c7a5502
-A
-Subtraction/Sub.h,4\6\46b71395a91ffc8e6a474f552fefa42b1d3c3184
-A
-Subtraction/Sub.c,d\c\dc04e4796909dcf216fa993b8137403a98cd658f
->
-Division/Div.c,7\9\79454f24957165579a3a9a0db1f920990284dd4a
->
-Addition/Add.h,2\f\2f43a6302359f0f25bf0cc1b19797ba14bdf8807
->
-Addition/Add.c,0\2\022c7e48995c120f4c33bd1842fc6db29f668765
-E
-OpHandler/OpHandler.c,5\b\5b5a2e8bb7ea29f023dc405f144507fa01d77b0b
+src/c/module.c,e\2\e2e77f21267eb666b9529889f18f2cbbdcdcfb77
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+8
+setup.py,8\e\8e2edce0d507e1297474f25c00cae94258db38d8
+8
+make.bat,6\e\6ec7f3d1cb598d136a0aed0a890f148e2f5e53c5
+8
+Makefile,8\3\836efb6e25a091dcb4ff8e1dbb2f0be6a5cbf14c
+9
+	build.bat,2\8\282119df8cfcad4c8c8421ba30fdcdf8793f5f82
