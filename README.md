@@ -161,6 +161,8 @@ result = Calculator.divide(20, 4)        # 5.0
 result = Calculator.calculate("2.5 + 3.7")    # 6.2
 result = Calculator.calculate("10 * 2.5")     # 25.0
 result = Calculator.calculate("-5 + 10")      # 5.0
+
+print(result)
 ```
 ### Command Line Interface
 
