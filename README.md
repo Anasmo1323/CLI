@@ -119,7 +119,7 @@ make clean
 
 ### Windows
 
-# Build, install and test the C extension:
+### Build, install and test the C extension:
 ```cmd
 # In cmd:
 # cd to the project root directory
@@ -128,7 +128,21 @@ make clean
 ./run.ps1 build
 ./run.ps1 install
 ```
-# That will install the python package directly to the Python lib folder
+### That will install the python package directly to the Python lib folder
+
+## Documentation
+
+### Accessing Sphinx Documentation
+
+```cmd
+# In cmd:
+# cd to the project root directory
+# then run the following commands:
+
+cd docs/_build/html
+start index.html
+
+```
 
 ## 🚀 Usage
 
