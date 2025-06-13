@@ -79,8 +79,8 @@ CLI_module/
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd calculator
+git clone https://github.com/Anasmo1323/CLI.git
+cd CLI
 
 # Install dependencies
 pip install -r requirements.txt
