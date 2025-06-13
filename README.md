@@ -120,12 +120,11 @@ make clean
 ### Windows
 
 # Build, install and test the C extension:
-
+```cmd
 # In cmd:
 # cd to the project root directory
 # then run the following commands:
 
-```cmd
 ./run.ps1 build
 ./run.ps1 install
 ```
