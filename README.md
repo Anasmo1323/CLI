@@ -151,7 +151,7 @@ cd docs
 
 sphinx-build -b html . _build/html
 
-cd docs/_build/html
+cd _build/html
 
 start index.html
 
