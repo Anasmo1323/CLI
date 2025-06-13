@@ -1,5 +1,5 @@
 
-Python dependencies for CLI Calculator project
+#Python dependencies for CLI Calculator project
 
 setuptools==75.6.0              #setuptools is a package development and distribution tool
 breathe==4.36.0                 #breathe is a Sphinx extension for C++ documentation
