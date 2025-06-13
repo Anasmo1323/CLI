@@ -7,6 +7,18 @@
 #include <stdlib.h> // For strtod
 #include <ctype.h>  // For isspace
 
+/**
+ * Evaluates a simple arithmetic expression and returns a Python object.
+ *
+ * This C-Python API wrapper parses a string expression from Python, calls
+ * c_api_calculate, and converts the result to a Python float object. The
+ * expression should be in the format "number operator number" (e.g., "2 + 3").
+ *
+ * @param self Pointer to the module object (unused, required by C-Python API).
+ * @param args Python tuple containing a string expression.
+ * @return PyObject* A Python float object containing the result of the expression.
+ *                   Returns NULL if the expression is malformed or invalid.
+ */
 PyObject* operation_handler(PyObject* self, PyObject* args) {
     const char *input_str;
     if (!PyArg_ParseTuple(args, "s", &input_str)) {

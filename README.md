@@ -14,25 +14,27 @@ A robust command-line calculator implemented in Python with a high-performance C
 ## 📁 Project Structure
 
 ```
-calculator/
+CLI_module/
 ├── src/
+│   ├── __init__.py                 # Package initialization
 │   ├── c/                          # C backend implementation
+│   │   ├── __init__.py             # C extension package initialization
 │   │   ├── module.c                # Python C extension module
 │   │   ├── addition/
-│   │   │   ├── add.c              # Addition operations
-│   │   │   └── add.h              # Addition headers
+│   │   │   ├── add.c               # Addition operations
+│   │   │   └── add.h               # Addition headers
 │   │   ├── subtraction/
-│   │   │   ├── sub.c              # Subtraction operations
-│   │   │   └── sub.h              # Subtraction headers
+│   │   │   ├── sub.c               # Subtraction operations
+│   │   │   └── sub.h               # Subtraction headers
 │   │   ├── multiplication/
-│   │   │   ├── multi.c            # Multiplication operations
-│   │   │   └── multi.h            # Multiplication headers
+│   │   │   ├── multi.c             # Multiplication operations
+│   │   │   └── multi.h             # Multiplication headers
 │   │   ├── division/
-│   │   │   ├── div.c              # Division operations
-│   │   │   └── div.h              # Division headers
+│   │   │   ├── div.c               # Division operations
+│   │   │   └── div.h               # Division headers
 │   │   └── ophandler/
-│   │       ├── op_handler.c       # Expression parsing and evaluation
-│   │       └── op_handler.h       # Expression handler headers
+│   │       ├── op_handler.c         # Expression parsing and evaluation
+│   │       └── op_handler.h        # Expression handler headers
 │   └── python/
 │       └── calculator/             # Python package
 │           ├── __init__.py         # Package initialization
@@ -41,15 +43,26 @@ calculator/
 ├── tests/
 │   ├── test_c_operations.c         # C unit tests
 │   └── test_python.py              # Python unit tests
+│
+├── docs/
+│   ├──_build/                      # Documentation build directory
+│   ├── conf.py                     # Sphinx configuration
+│   ├── index.rst                   # Documentation index
+│   ├── api.rst                     # API documentation
+│   ├── c_backend.rst               # C backend details
+│   └── installation.rst            # Installation guide
+│ 
 ├── .github/
 │   └── workflows/
 │       └── ci.yml                  # GitHub Actions CI/CD
+├── .gitignore                      # Git ignore file
 ├── Makefile                        # Unix/Linux build system
-├── make.bat                        # Windows build system
-├── build.bat                       # Windows build script
+├── run.ps1                         # PowerShell script for Windows
+├── build.ps1                       # PowerShell script for building
 ├── pyproject.toml                  # Modern Python project configuration
 ├── setup.py                        # Package setup and C extension build
 ├── requirements.txt                # Python dependencies
+├── Doxyfiledoxygen                 # Doxygen configuration for C documentation
 └── README.md                       # This file
 ```
 
@@ -107,17 +120,8 @@ make clean
 ### Windows
 
 ```cmd
-# Build the C extension
-make.bat build
-
-# Run tests
-make.bat test
-
-# Install the package
-make.bat install
-
-# Clean build artifacts
-make.bat clean
+# Build, install and test the C extension
+./run.ps1 install
 ```
 
 ## 🚀 Usage
