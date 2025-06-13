@@ -1,6 +1,8 @@
 param([string]$Target = "build")
 
-$env:PYTHONPATH = "D:\CLI_module"
+# Get the directory where the script is located and set it as PYTHONPATH
+$env:PYTHONPATH = Split-Path -Parent $MyInvocation.MyCommand.Path
+
 pytest tests/
 
 # Temporarily allow script execution

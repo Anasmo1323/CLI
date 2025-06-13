@@ -23,12 +23,6 @@ extensions = [
     'sphinx.ext.viewcode',
     'sphinx.ext.todo',
     'breathe',
-    'myst_parser'
-]
-myst_enable_extensions = [
-    "colon_fence",
-    "deflist",
-    "html_image",
 ]
 
 
