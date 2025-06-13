@@ -22,8 +22,16 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.todo',
-    'breathe'
+    'breathe',
+    'myst_parser'
 ]
+myst_enable_extensions = [
+    "colon_fence",
+    "deflist",
+    "html_image",
+]
+
+
 templates_path = ['_templates']
 exclude_patterns = []
 breathe_projects = {"CLI Calculator": os.path.abspath(os.path.join(os.path.dirname(__file__), "_build/doxygen/xml"))}
