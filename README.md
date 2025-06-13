@@ -119,13 +119,36 @@ make clean
 
 ### Windows
 
+# Build, install and test the C extension:
+
+# In cmd:
+# cd to the project root directory
+# then run the following commands:
+
 ```cmd
-# Build, install and test the C extension
+./run.ps1 build
 ./run.ps1 install
 ```
+# That will install the python package directly to the Python lib folder
 
 ## 🚀 Usage
 
+### Python Library
+
+```python
+from calculator import Calculator
+
+# Direct method calls
+result = Calculator.add(2.5, 3.7)        # 6.2
+result = Calculator.subtract(10, 4)      # 6.0
+result = Calculator.multiply(3, 4)       # 12.0
+result = Calculator.divide(20, 4)        # 5.0
+
+# Expression evaluation
+result = Calculator.calculate("2.5 + 3.7")    # 6.2
+result = Calculator.calculate("10 * 2.5")     # 25.0
+result = Calculator.calculate("-5 + 10")      # 5.0
+```
 ### Command Line Interface
 
 The calculator provides two main modes:
@@ -155,22 +178,6 @@ calc expr "20 / 4"             # Output: Result: 5.0
 calc expr " 1.5 * 2 "          # Output: Result: 3.0
 ```
 
-### Python Library
-
-```python
-from calculator import Calculator
-
-# Direct method calls
-result = Calculator.add(2.5, 3.7)        # 6.2
-result = Calculator.subtract(10, 4)      # 6.0
-result = Calculator.multiply(3, 4)       # 12.0
-result = Calculator.divide(20, 4)        # 5.0
-
-# Expression evaluation
-result = Calculator.calculate("2.5 + 3.7")    # 6.2
-result = Calculator.calculate("10 * 2.5")     # 25.0
-result = Calculator.calculate("-5 + 10")      # 5.0
-```
 
 ## 🧪 Testing
 
