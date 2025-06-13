@@ -2,3 +2,4 @@
 venv
 *.exe
 cmake-build-debug
+tests/__pycache__/*

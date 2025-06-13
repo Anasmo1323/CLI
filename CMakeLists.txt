@@ -4,7 +4,7 @@ set(CMAKE_C_STANDARD 11)
 find_package(Python3 COMPONENTS Development REQUIRED)
 include_directories(${Python3_INCLUDE_DIRS})
 
-add_library(CLI_module SHARED main.c Addition/Add.h Addition/Add.c Division/Div.h Division/Div.c Multiplication/Multi.h Multiplication/Multi.c Subtraction/Sub.c OpHandler/OpHandler.h OpHandler/OpHandler.c)
+add_library(CLI_module SHARED src/c/module.c src/c/Addition/Add.h src/c/Addition/Add.c src/c/Division/Div.h src/c/Division/Div.c src/c/Multiplication/Multi.h src/c/Multiplication/Multi.c src/c/Subtraction/Sub.c src/c/OpHandler/op_handler.c)
 target_link_libraries(CLI_module PRIVATE ${Python3_LIBRARIES})
 set_target_properties(CLI_module PROPERTIES SUFFIX ".pyd")
 set_target_properties(CLI_module PROPERTIES PREFIX "")

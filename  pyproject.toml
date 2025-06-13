@@ -1,0 +1,45 @@
+# pyproject.toml
+# This file defines project metadata and build system requirements for modern Python packaging tools.
+[build-system]
+# Specifies the build tools needed to build the package.
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cli-calculator-TheATeam"
+version = "1.0.0"
+description = "A robust CLI calculator with a C backend."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT License" }
+authors = [{ name = "Ali", email = "alizayan684@gmail.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: C",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+]
+# Add your dependencies here
+dependencies = [
+    # e.g., "cffi>=1.15.0",
+]
+
+# Defines the console script. This is the modern way to specify entry points.
+[project.scripts]
+calc = "calculator.cli:main"
+
+# Optional development dependencies
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "flake8>=5.0.0",
+]
+
+# URLs for your project
+[project.urls]
+"Homepage" = "https://github.com/Anas1323/CLI"
+
+# Setuptools specific configuration
+[tool.setuptools]
+# Explicitly specify packages to include
+packages = ["calculator"]
