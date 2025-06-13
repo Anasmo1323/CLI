@@ -118,6 +118,7 @@ make clean
 ```
 
 ### Windows
+### Make sure you have MS Build Tools ( C++ Development ) https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
 ### Build, install and test the C extension:
 ```cmd
@@ -131,7 +132,9 @@ make clean
 ### That will install the python package directly to the Python lib folder
 
 ## Documentation
-
+#### Make sure you have Doxygen https://www.doxygen.nl/download.html
+ 
+#### and myst-parser using pip
 ### Accessing Sphinx Documentation
 
 ```cmd
