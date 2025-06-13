@@ -139,6 +139,9 @@ make clean
 # cd to the project root directory
 # then run the following commands:
 
+doxygen Doxyfiledoxygen Doxyfile
+cd docs
+sphinx-build -b html . _build/html
 cd docs/_build/html
 start index.html
 
