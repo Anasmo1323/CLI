@@ -1,5 +1,5 @@
 
-#ifndef CLI_MODULE_ADD_H
+#ifndef CLI_MODULE_POW_H
 #define CLI_MODULE_ADD_H
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
@@ -9,4 +9,4 @@ double c_api_add(double a, double b);
 // Python C-API wrapper function
 PyObject* add(PyObject* self, PyObject* args);
 
-#endif //CLI_MODULE_ADD_H
+#endif //CLI_MODULE_POW_H

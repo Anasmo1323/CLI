@@ -4,6 +4,7 @@
 #include "subtraction/sub.h"
 #include "multiplication/multi.h"
 #include "division/div.h"
+#include "Power/pow.h"
 #include "ophandler/op_handler.h"
 
 // Define the methods of this module that will be accessible from Python.
@@ -13,6 +14,7 @@ static PyMethodDef CalculatorMethods[] = {
     {"c_subtract", subtract, METH_VARARGS, "C function to subtract two numbers."},
     {"c_multiply", multiply, METH_VARARGS, "C function to multiply two numbers."},
     {"c_divide", divide, METH_VARARGS, "C function to divide two numbers."},
+    {"c_power", power, METH_VARARGS, "C function to calculate power."},
     {"c_calculate", operation_handler, METH_VARARGS, "C function to calculate a string expression like 'num1+num2'."},
     {NULL, NULL, 0, NULL} // Sentinel to mark the end of the method table.
 };

@@ -95,7 +95,22 @@ class Calculator:
         if b == 0:
             raise ZeroDivisionError("Python API check: division by zero is not allowed.")
         return _c_calculator.c_divide(a, b)
+    def power(a: float, b: float) -> float:
+        """
+        Adds two numbers using the C backend.
 
+        Args:
+            a (float): The first number to add.
+            b (float): The second number to add.
+
+        Returns:
+            float: The sum of ``a`` and ``b``.
+
+        Example:
+            >>> Calculator.power(2.0, 3.0)
+            6.2
+        """
+        return _c_calculator.c_power(a, b)
     @staticmethod
     def calculate(expression: str) -> float:
         """

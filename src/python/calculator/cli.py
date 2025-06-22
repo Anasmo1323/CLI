@@ -35,7 +35,8 @@ def main():
                 '+': Calculator.add,
                 '-': Calculator.subtract,
                 '*': Calculator.multiply,
-                '/': Calculator.divide
+                '/': Calculator.divide,
+                '^': Calculator.power
             }
             result = operations_map[args.operation](args.a, args.b)
         elif args.command == 'expr':

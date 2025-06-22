@@ -3,6 +3,7 @@
 #include "../subtraction/sub.h"
 #include "../multiplication/multi.h"
 #include "../division/div.h"
+#include "../Power/pow.h"
 #include <string.h> // For strchr, strlen
 #include <stdlib.h> // For strtod
 #include <ctype.h>  // For isspace
@@ -78,7 +79,12 @@ PyObject* operation_handler(PyObject* self, PyObject* args) {
         case '*':
             result = c_api_multiply(num1, num2);
             break;
-        case '/':
+
+        case '^':
+            result = c_api_pow(num1, num2);
+            break;
+
+            case '/':
             if (num2 == 0) {
                 PyErr_SetString(PyExc_ZeroDivisionError, "Cannot divide by zero.");
                 return NULL;

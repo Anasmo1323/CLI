@@ -9,10 +9,17 @@ TOLERANCE = 1e-9
 
 # --- Test direct API calls ---
 
+def test_power():
+    assert abs(Calculator.power(2, 3) - 8.0) < TOLERANCE
+    assert abs(Calculator.power(4, 3) - 64.0) < TOLERANCE
+
+
 def test_add():
     assert abs(Calculator.add(2, 3) - 5.0) < TOLERANCE
     assert abs(Calculator.add(-1, 1) - 0.0) < TOLERANCE
     assert abs(Calculator.add(1.2, 3.4) - 4.6) < TOLERANCE
+
+
 
 def test_subtract():
     assert abs(Calculator.subtract(10, 5) - 5.0) < TOLERANCE

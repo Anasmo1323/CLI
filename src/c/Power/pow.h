@@ -1,0 +1,13 @@
+
+#ifndef CLI_MODULE_POW_H
+#define CLI_MODULE_POW_H
+#define PY_SSIZE_T_CLEAN
+#include <Python.h>
+// Pure C function for internal use
+
+double c_api_pow(double a, double b);
+
+// Python C-API wrapper function
+PyObject* power(PyObject* self, PyObject* args);
+
+#endif //CLI_MODULE_POW_H
